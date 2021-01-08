@@ -5,7 +5,7 @@
 
 from spack import *
 
-class Manpages(MakefilePAckage):
+class Manpages(MakefilePackage):
     """Describe C programming language functions, 
     important device files, and significant configuration files"""
 
