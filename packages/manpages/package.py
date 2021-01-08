@@ -15,7 +15,7 @@ class Manpages(MakefilePackage):
     version('5.10', sha256='75102535ba119f2f223f674d84e1dcdaebf0a5ffd639b3c2e6cb0a0e34768762')
 
     def build(self, spec, prefix):
-        make('PREFIX={0}'.format(prefix))
+        make('MANDIR={0}/man'.format(prefix))
     
     def install(self, spec, prefix):
-        make('install', 'PREFIX={0}'.format(prefix))
+        make('install', 'MANDIR={0}/man'.format(prefix))
