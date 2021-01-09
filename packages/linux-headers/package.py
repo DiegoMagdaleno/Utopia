@@ -15,7 +15,7 @@ class LinuxHeaders(Package):
     list_depth = 2
 
 
-    version('5.10.6', sha256='7767D02C1CB5EB2A8D3C2B15A3F93E85B98BAA6E9D93A3B9E3EC0E959D0A690B')
+    version('5.10.6', sha256='7767d02c1cb5eb2a8d3c2b15a3f93e85b98baa6e9d93a3b9e3ec0e959d0a690b')
     version('4.9.10', sha256='bd6e05476fd8d9ea4945e11598d87bc97806bbc8d03556abbaaf809707661525')
 
     def setup_build_environment(self, env):
