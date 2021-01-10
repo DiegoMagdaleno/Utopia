@@ -36,7 +36,6 @@ class Fontconfig(AutotoolsPackage):
     def system_fonts(self):
         # point configuration file to system-install fonts
         # gtk applications were failing to display text without this
-        config_file 
         filter_file('<dir prefix="xdg">fonts</dir>',
                     '<dir prefix="xdg">fonts</dir><dir>/usr/share/fonts</dir>',
                     '/System/Settings/fonts/fonts.conf')
