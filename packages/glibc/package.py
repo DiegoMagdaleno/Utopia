@@ -49,6 +49,7 @@ class Glibc(AutotoolsPackage):
             # Fix error: selinux/selinux.h: No such file or directory
             '--without-selinux',
             '--with-headers={0}'.format(spec['linux-headers'].prefix.include),
+            '--with-binutils={0}'.format(spec['binutils'].prefix.bin),
             '--libexecdir={0}'.format(self.prefix.lib),
         ]
 
