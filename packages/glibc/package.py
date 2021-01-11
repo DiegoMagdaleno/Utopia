@@ -45,15 +45,10 @@ class Glibc(AutotoolsPackage):
             # Fix error: selinux/selinux.h: No such file or directory
             '--without-selinux',
             '--with-headers={0}'.format(spec['linux-headers'].prefix.include),
-            '--enable-add-ons',
-            '--with-tls',
-            '--with-__thread',
             '--libexecdir={0}'.format(self.prefix.lib),
-            'libc_cv_c_cleanup=yes',
-            'libc_cv_forced_unwind=yes'
         ]
 
-    def build(self, spec, prefix):    
+    def build(self, spec, prefix):  
         make()
     
     def install(self):
