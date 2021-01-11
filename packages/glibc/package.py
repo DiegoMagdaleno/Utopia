@@ -18,6 +18,7 @@ class Glibc(AutotoolsPackage):
     version('2.32', sha256='1627ea54f5a1a8467032563393e0901077626dc66f37f10ee6363bb722222836')
 
     depends_on('linux-headers')
+    depends_on('binutils')
 
     patch('glibc-2.32-fhs-1.patch')
     patch('glibc-2.32-allow-symlinks.patch')
