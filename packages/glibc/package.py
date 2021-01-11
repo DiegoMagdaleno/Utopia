@@ -28,15 +28,15 @@ class Glibc(AutotoolsPackage):
     # depends_on('py-pexpect@4.0', type='test')
     # depends_on('gdb@7.8:', type='test')
 
-    build_directory = 'build'
+    build_directory = 'spack-build'
 
     def setup_build_environment(self, env):
         env.unset('LDFLAGS')
         env.unset('LD_LIBRARY_PATH')
         env.unset('LD_RUN_PATH')
         env.unset('LIBRARY_PATH')
-        #env.unset('SPACK_RPATH_DIRS')
-        #env.unset('SPACK_LINK_DIRS')
+        env.unset('SPACK_RPATH_DIRS')
+        env.unset('SPACK_LINK_DIRS')
 
     def configure_args(self):
         spec = self.spec
