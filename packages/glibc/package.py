@@ -19,6 +19,10 @@ class Glibc(AutotoolsPackage):
 
     depends_on('linux-headers')
 
+    patch('glibc-2.32-fhs-1.patch')
+    patch('glibc-2.32-allow-symlinks.patch')
+    patch('glibc-2.32-skip-installation-test.patch')
+
     # TODO: Add a 'test' deptype
     # depends_on('python@2.7.6:2.8,3.4.3:', type='test')
     # depends_on('py-pexpect@4.0', type='test')
