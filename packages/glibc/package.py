@@ -31,7 +31,6 @@ class Glibc(AutotoolsPackage):
         env.unset('LD_LIBRARY_PATH')
         env.unset('LD_RUN_PATH')
         env.unset('LIBRARY_PATH')
-        env.unset('SPACK_CC_RPATH_ARG')
         env.unset('SPACK_RPATH_DIRS')
         env.unset('SPACK_LINK_DIRS')
 
