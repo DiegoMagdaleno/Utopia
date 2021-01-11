@@ -46,7 +46,10 @@ class Glibc(AutotoolsPackage):
             '--enable-kernel=3.2',
             '--enable-stack-protector=strong',
             'libc_cv_slibdir=/lib',
-            '--disable-profile',
+            "--disable-debug",
+            "--disable-dependency-tracking",
+            "--disable-silent-rules",
+            "--enable-obsolete-rpc",
             # Fix error: selinux/selinux.h: No such file or directory
             '--without-selinux',
             '--with-headers={0}'.format(spec['linux-headers'].prefix.include),
